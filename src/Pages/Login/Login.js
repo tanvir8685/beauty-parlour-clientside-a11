@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import img from './../../assests/images/login.svg';
 
 const Login = () => {
+    const handleLogIn = event => {
+        event.preventDefault();
+        const form=event.target;
+        const email=form.email.value;
+        const password=form.password.value;
+        console.log(email,password)}
     return (
         <div>
            <div className="hero min-h-screen bg-base-200">
@@ -15,7 +21,7 @@ const Login = () => {
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <h1 className="text-5xl font-bold text-center">Login now!</h1>
 
-                    <form onSubmit=""className="card-body">
+                    <form onSubmit={handleLogIn}className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -34,9 +40,9 @@ const Login = () => {
                         <div className="form-control mt-6">
                             
                             <button className="btn btn-primary">LogIn</button>
-                            
-                            <button onClick="" className="btn btn-primary my-3">LogInWithGoogle</button>
-                            <button onClick="" className="btn btn-primary my-3">LogInWithGitHub</button>
+
+                            <button className="btn btn-primary my-3">LogInWithGoogle</button>
+                            <button  className="btn btn-primary my-3">LogInWithGitHub</button>
 
                         </div>
                     </form>
