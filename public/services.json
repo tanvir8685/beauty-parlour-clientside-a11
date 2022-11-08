@@ -1,0 +1,47 @@
+[
+    {
+        "_id":"01",
+        "title":"Hair Cut",
+        "img":"https://media.istockphoto.com/id/961867192/photo/cropped-shot-of-female-client-receiving-a-haircut.jpg?s=612x612&w=0&k=20&c=JwUPYNi8aT7vDFevhWQdA8JCaf0Oy0ZVxZ2IswwkJis=",
+        "price":"250",
+        "detail":"Change in haircut and style is a must after a certain period of time. Though the average speed at which the hair grows differs from person to person, regular cuts help to keep its shape and make it easier for you to manage. Lesser tangles, lesser flyaways, lesser breakage and no split-ends equals easy hair management!"
+
+    },
+    {
+        "_id":"02",
+        "title":"Facial",
+        "img":"https://media.istockphoto.com/id/1366228042/photo/facial-aesthetics-surgery-treatment.jpg?s=612x612&w=0&k=20&c=7zOyHVSkG1FrdqUqG1jXWWdPquSKXotFbvujX1SwPyw=",
+        "price":"500",
+        "detail":"Your face is an expressive canvass that shows experience and emotion. At one of the best salons around, our palette holds nourishing treatments, which enhances, emphasizes beauty, youth and color for your body. Before any facial, our professional esthetician will give you a consolidation and work from there You won’t believe the difference!"
+
+    },{
+        "_id":"03",
+        "title":"MakeUp",
+        "price":"1550",
+        "img":"https://media.istockphoto.com/id/1370468785/photo/a-nude-eyeshadow-palette-and-makeup-artists-tools-on-a-marble-vanity-brushes-for-powder-blush.jpg?s=612x612&w=0&k=20&c=8K-VjKOtdomupO_HDwhOmVe3KNKGwquUVMzq9bbLi7Q=",
+        "detail":"Makeup also allows you to cover skin concerns that may cause insecurity. While you don't have to wear makeup or use it to hide anything, many people prefer to keep blemishes and dark spots undercover—and makeup helps you to do that"
+
+    },{
+        "_id":"04",
+        "title":"Nail Care",
+        "img":"https://media.istockphoto.com/id/1133679898/photo/woman-using-cuticle-pusher.jpg?s=612x612&w=0&k=20&c=9gLxmU_kET8z0jIN1OcNlfhrOmS9EWLGmHoh3hdD8Vw=",
+        "price":"250",
+        "detail":"Nail care, the maintenance of the fingernails and toenails, is important for health as well as cosmetic reasons. Good nail care can prevent fungus infections of the nail, painful ingrown fingernails and toenails, and infections of the skin in the hands and feet."
+
+    },
+    {
+        "_id":"05",
+        "title":"Eye Care",
+        "price":"250",
+        "img":"https://media.istockphoto.com/id/1281931959/photo/young-woman-on-eyebrow-correction-in-cosmetology-clinic.jpg?s=612x612&w=0&k=20&c=1ppSU4hLwLpJr2XPXL3fSv7-5NmkBFtw9rvIx3QRnKs=",
+        "detail":"Early treatment is critically important to prevent some common eye diseases from causing permanent vision loss or blindness: Cataracts (clouding of the lens), the leading cause of vision loss in the United States"
+
+    },{
+        "_id":"06",
+        "title":"Waxing",
+        "price":"550",
+        "img":"https://media.istockphoto.com/id/1324801970/photo/shugaring-paste-body-hair-removal-depilation-body-care-products.jpg?s=612x612&w=0&k=20&c=9tHZI7gbnhZ_poXLGiet0XNfRFvo_4jbkRlqPa4JI1I=",
+        "detail":"A build-up of dead skin cells and grime on your skin can cause outbreaks, blemishes and dryness. It's why we exfoliate, in order to remove it all. With waxing, all of this is removed for you, as part of the process. The result is that the waxed area is smooth, radiant, clean and fresh."
+
+    }
+]

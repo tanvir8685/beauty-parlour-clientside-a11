@@ -5,7 +5,7 @@ import bridal4 from '../../../assests/images/bridal4.jpg';
 import bridal5 from '../../../assests/images/bridal5.jpg';
 
 
-import bridal3 from '../../../assests/images/istockphoto-1294568151-1024x1024.jpg';
+
 
 
 
@@ -16,28 +16,28 @@ const BridalSection = () => {
                 <div className="hero-content ">
                     <div className="carousel  w-full h-96">
                         <div id="slide1" className="carousel-item relative w-full">
-                            <img src={bridal1}  className="  w-full h-full" />
+                            <img src={bridal1} alt='' className="  w-full h-full" />
                             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                                 <a href="#slide4" className="btn btn-circle">❮</a>
                                 <a href="#slide2" className="btn btn-circle">❯</a>
                             </div>
                         </div>
                         <div id="slide2" className="carousel-item relative w-full">
-                            <img src={bridal5} className="w-full h-full" />
+                            <img src={bridal5}alt='' className="w-full h-full" />
                             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                                 <a href="#slide1" className="btn btn-circle">❮</a>
                                 <a href="#slide3" className="btn btn-circle">❯</a>
                             </div>
                         </div>
                         <div id="slide3" className="carousel-item relative w-full">
-                            <img src={bridal6} className="w-full" />
+                            <img src={bridal6}alt='' className="w-full" />
                             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                                 <a href="#slide2" className="btn btn-circle">❮</a>
                                 <a href="#slide4" className="btn btn-circle">❯</a>
                             </div>
                         </div>
                         <div id="slide4" className="carousel-item relative w-full">
-                            <img src={bridal4} className="w-full" />
+                            <img src={bridal4}alt='' className="w-full" />
                             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                                 <a href="#slide3" className="btn btn-circle">❮</a>
                                 <a href="#slide1" className="btn btn-circle">❯</a>
