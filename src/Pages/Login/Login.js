@@ -32,10 +32,11 @@ const Login = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            {/* <input type="submit " className="btn btn-primary" value="login" /> */}
-                            <button className="btn btn-primary">LogIn</button>
-                            <button onClick="" className="btn btn-primary my-3">LogInWithGoogle</button>
                             
+                            <button className="btn btn-primary">LogIn</button>
+                            
+                            <button onClick="" className="btn btn-primary my-3">LogInWithGoogle</button>
+                            <button onClick="" className="btn btn-primary my-3">LogInWithGitHub</button>
 
                         </div>
                     </form>
