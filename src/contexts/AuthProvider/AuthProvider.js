@@ -23,6 +23,10 @@ const AuthProvider = ({children}) => {
     const googleSignIn=(provider)=>{
         return signInWithPopup(auth, provider)
     }
+    const providerLogin=(provider)=>{
+        setLoading(true);
+        return signInWithPopup(auth,provider);
+    }
     const logOut=()=>{
         localStorage.removeItem('geniousToken');
         return signOut(auth);
@@ -44,7 +48,8 @@ const AuthProvider = ({children}) => {
         createUser,
         signIn,
         googleSignIn,
-        logOut
+        logOut,
+        providerLogin
 
     }
     return (

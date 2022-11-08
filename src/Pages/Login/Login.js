@@ -1,17 +1,32 @@
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import img from './../../assests/images/login.svg';
 
 const Login = () => {
-    const{signIn,googleSignIn}=useContext(AuthContext);
+    const{signIn,googleSignIn,providerLogin}=useContext(AuthContext);
     const handleLogIn = event => {
         event.preventDefault();
         const form=event.target;
         const email=form.email.value;
         const password=form.password.value;
-        console.log(email,password)}
+        console.log(email,password)
+        signIn(email,password)
+        .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            console.log(user)
+            
+            })
+            .catch((error) => {
+                console.log(error)
+              });
+           
+    
+    
+    
+    }
         const googleLogIn=()=>{
             googleSignIn(provider)
               .then((result) => {
@@ -25,7 +40,18 @@ const Login = () => {
               });
     
         }
+        const handleGitSignIn=()=>{
+            providerLogin(githubProvider)
+            .then(result=>{
+                const user =result.user;
+                console.log(user);
+                // navigate(from,{replace:true});
+            })
+            .catch(error=>console.error(error));
+    
+        }
         const provider = new GoogleAuthProvider();
+        const githubProvider= new GithubAuthProvider();
 
     return (
         <div>
@@ -60,7 +86,7 @@ const Login = () => {
                             <button className="btn btn-primary">LogIn</button>
 
                             <button onClick={googleLogIn} className="btn btn-primary my-3">LogInWithGoogle</button>
-                            <button  className="btn btn-primary my-3">LogInWithGitHub</button>
+                            <button onClick={handleGitSignIn}  className="btn btn-primary my-3">LogInWithGitHub</button>
 
                         </div>
                     </form>
