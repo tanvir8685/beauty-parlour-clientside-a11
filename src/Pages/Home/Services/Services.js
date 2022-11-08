@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import ServiceCart from './ServiceCart';
 
 const Services = () => {
@@ -19,6 +20,7 @@ const Services = () => {
                         service={service}></ServiceCart>)
                 }
             </div>
+            <button><Link to='/services'>See All</Link></button>
         </div>
     );
 };
