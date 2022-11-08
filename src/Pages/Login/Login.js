@@ -1,14 +1,32 @@
-import React from 'react';
+import { GoogleAuthProvider } from 'firebase/auth';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import img from './../../assests/images/login.svg';
 
 const Login = () => {
+    const{signIn,googleSignIn}=useContext(AuthContext);
     const handleLogIn = event => {
         event.preventDefault();
         const form=event.target;
         const email=form.email.value;
         const password=form.password.value;
         console.log(email,password)}
+        const googleLogIn=()=>{
+            googleSignIn(provider)
+              .then((result) => {
+                
+                const user = result.user;
+                
+                
+              }).catch((error) => {
+                console.log(error)
+                
+              });
+    
+        }
+        const provider = new GoogleAuthProvider();
+
     return (
         <div>
            <div className="hero min-h-screen bg-base-200">
@@ -41,7 +59,7 @@ const Login = () => {
                             
                             <button className="btn btn-primary">LogIn</button>
 
-                            <button className="btn btn-primary my-3">LogInWithGoogle</button>
+                            <button onClick={googleLogIn} className="btn btn-primary my-3">LogInWithGoogle</button>
                             <button  className="btn btn-primary my-3">LogInWithGitHub</button>
 
                         </div>
