@@ -11,7 +11,7 @@ const Services = () => {
     }, [])
     return (
         <div className='container'>
-            <h2>here is my services</h2>
+            <h2 className='text-4xl font-extrabold	text-center'>Here is my services</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
 
                 {
@@ -20,7 +20,11 @@ const Services = () => {
                         service={service}></ServiceCart>)
                 }
             </div>
-            <button><Link to='/services'>See All</Link></button>
+            <div className='container py-10 px-10 mx-0 min-w-full flex flex-col items-center'>
+                <p></p>
+                <button className=' btn btn-outline btn-primary' ><Link to='/services'>See All</Link></button>
+            </div>
+
         </div>
     );
 };

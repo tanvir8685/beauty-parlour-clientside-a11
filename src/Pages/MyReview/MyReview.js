@@ -31,7 +31,10 @@ const MyReview = () => {
     }
     return (
         <div>
-            <h1>Here is my {myReview.length}  review</h1>
+            {
+                myReview.length>0?
+            
+                <>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10'>
             {
                 myReview.map(mr=><MyReviewRow
@@ -40,6 +43,9 @@ const MyReview = () => {
                 handleDelete={handleDelete}></MyReviewRow>)
             }
             </div>
+            </>:
+            <p>You have no review</p>
+}
         </div>
     );
 };
