@@ -4,7 +4,7 @@ import img from '../../assests/images/login.svg'
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const SignUp = () => {
-    const {createUser}=useContext(AuthContext)
+    const {createUser,updateUserProfile}=useContext(AuthContext)
     const handleSignUp = event => {
         event.preventDefault();
         const form = event.target;
@@ -18,6 +18,7 @@ const SignUp = () => {
             // Signed in 
             const user = userCredential.user;
             console.log(user)
+            handleUpdateUserProfile(name,img);
             
             // ...
           })
@@ -26,6 +27,17 @@ const SignUp = () => {
             const errorMessage = error.message;
             // ..
           });
+    }
+
+
+    const handleUpdateUserProfile =(name,img)=>{
+        const profile={
+            displayName:name,
+            photoURL:img
+        }
+        updateUserProfile(profile)
+        .then(()=>{})
+        .catch(error=>console.error(error))
     }
     return (
         <div>

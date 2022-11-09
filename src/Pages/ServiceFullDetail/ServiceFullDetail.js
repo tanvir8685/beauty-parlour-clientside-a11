@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const ServiceFullDetail = () => {
     const {user}=useContext(AuthContext);
-    console.log(user.displayName);
-    console.log(user.photoURL )
+    const[review,setReview]=useState([])
+    
     const service = useLoaderData();
     const { _id, title, detail, price, img } = service;
     const handlereview=(event)=>{
@@ -18,9 +18,11 @@ const ServiceFullDetail = () => {
             service:_id,
             name:user.displayName,
             photo:user.photoURL ,
-            comment:review
+            comment:review,
+            email:user.email
 
         }
+        console.log(reviewFordb)
         fetch('http://localhost:5000/review',{
             method:'POST',
             headers:{
@@ -29,7 +31,12 @@ const ServiceFullDetail = () => {
             body:JSON.stringify(reviewFordb)
         })
         .then(res=>res.json())
-        .then(data=>console.log(data))
+        .then(data=>{
+            if(data.acknowledged){
+                form.reset();
+            }
+            console.log(data)
+        })
         .catch(err=>console.error(err))
     }
     return (
