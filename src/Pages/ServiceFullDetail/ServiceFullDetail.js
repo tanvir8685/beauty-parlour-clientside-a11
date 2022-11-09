@@ -75,7 +75,12 @@ const ServiceFullDetail = () => {
                 <label className="input-group input-group-md">
                     <span>MD</span>
                     <input type="text" name='review' placeholder="Type here" className="input input-bordered input-md" />
-                    <button>Submit</button>
+
+                {
+                    user?.uid ? <button>Submit</button> : <p>To comment you have to login </p>
+                }
+
+                    
                 </label>
             </div>
             </form>
