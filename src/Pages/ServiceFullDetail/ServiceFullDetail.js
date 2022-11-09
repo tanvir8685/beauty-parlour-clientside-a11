@@ -25,6 +25,7 @@ const ServiceFullDetail = () => {
 
         const reviewFordb={
             service:_id,
+            service_title:title,
             name:user.displayName,
             photo:user.photoURL ,
             comment:review,
