@@ -1,13 +1,22 @@
-import React, { useContext, useState } from 'react';
+import { data } from 'autoprefixer';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import ReviewSection from '../ReviewSection/ReviewSection';
 
 const ServiceFullDetail = () => {
-    const {user}=useContext(AuthContext);
-    const[review,setReview]=useState([])
-    
     const service = useLoaderData();
     const { _id, title, detail, price, img } = service;
+    const {user}=useContext(AuthContext);
+    const[review,setReview]=useState([])
+    useEffect(()=>{
+        fetch(`http://localhost:5000/review?service=${_id}`)
+        .then(res=>res.json())
+        .then(data=>setReview(data))
+    },[])
+    
+    
+    
     const handlereview=(event)=>{
         event.preventDefault();
         const form = event.target;
@@ -55,6 +64,12 @@ const ServiceFullDetail = () => {
                     </div>
                 </div>
             </div>
+            <h2>There have  {review.length} reviews</h2>
+            {
+                review.map(rev=><ReviewSection
+                key={rev._id}
+                rev={rev}></ReviewSection>)
+            }
             <form onSubmit={handlereview}>
             <div className="form-control">
                 <label className="input-group input-group-md">
