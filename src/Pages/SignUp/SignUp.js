@@ -9,9 +9,10 @@ const SignUp = () => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
+        const img=form.img.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name,email,password)
+        console.log(name,email,password,img)
         createUser(email,password)
         .then((userCredential) => {
             // Signed in 
@@ -44,6 +45,12 @@ const SignUp = () => {
                                 <span className="label-text">Name</span>
                             </label>
                             <input type="text" name='name' placeholder="name" className="input input-bordered" />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Image</span>
+                            </label>
+                            <input type="text" name='img' placeholder="image_url" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
