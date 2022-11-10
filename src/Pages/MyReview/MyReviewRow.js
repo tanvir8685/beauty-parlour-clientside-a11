@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const MyReviewRow = ({mr,handleDelete}) => {
+const MyReviewRow = ({mr,handleDelete,handleUpdate}) => {
     const{service_title,comment,_id}=mr;
     
     
@@ -12,7 +13,7 @@ const MyReviewRow = ({mr,handleDelete}) => {
                     <p>{comment}</p>
                     <div className="card-actions justify-end">
                         <button onClick={()=>handleDelete(_id)} className="btn btn-primary">Delete</button>
-                        <button className="btn btn-primary">Update</button>
+                        <button onClick={()=>handleUpdate(_id)} className="btn btn-primary"><Link to='/updateReview'>Update</Link>  </button>
                     </div>
                 </div>
             </div>

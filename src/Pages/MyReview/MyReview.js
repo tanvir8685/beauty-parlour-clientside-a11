@@ -31,6 +31,22 @@ const MyReview = () => {
         }
 
     }
+    const handleUpdate=_id=>{
+        
+        fetch(`http://localhost:5000/review/${_id}`,{
+            method:'PUT',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(myReview)
+
+
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+        })
+    }
     return (
         <div>
             {
@@ -42,7 +58,8 @@ const MyReview = () => {
                 myReview.map(mr=><MyReviewRow
                 key={mr.id}
                 mr={mr}
-                handleDelete={handleDelete}></MyReviewRow>)
+                handleDelete={handleDelete}
+                handleUpdate={handleUpdate}></MyReviewRow>)
             }
             </div>
             </>:
