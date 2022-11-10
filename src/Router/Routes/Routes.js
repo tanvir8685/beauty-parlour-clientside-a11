@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../../Layout/Main';
+import AddPersonalService from '../../Pages/AddPersonalService/AddPersonalService';
 import AddService from '../../Pages/AddService/AddService';
 import AllServices from '../../Pages/AllServices/AllServices';
 import Blogs from '../../Pages/Blogs/Blogs';
@@ -32,12 +33,12 @@ const router=createBrowserRouter([
         {
             path:'/services',
             element:<AllServices></AllServices>,
-            loader:()=>fetch('http://localhost:5000/services')
+            loader:()=>fetch('https://beauty-parlour-server-nine.vercel.app/services')
         },
         {
             path:'/services/:id',
             element:<ServiceFullDetail></ServiceFullDetail>,
-            loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+            loader:({params})=>fetch(`https://beauty-parlour-server-nine.vercel.app/services/${params.id}`)
         },
         {
             path:'/myreview',
@@ -45,7 +46,7 @@ const router=createBrowserRouter([
         },
         {
             path:'/addservice',
-            element:<PrivateRoute><AddService></AddService></PrivateRoute>
+            element:<AddPersonalService></AddPersonalService>
         },
         {
             path:'/blogs',

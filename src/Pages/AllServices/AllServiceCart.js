@@ -18,7 +18,7 @@ const AllServiceCart = ({ service }) => {
                     <div className="card-body">
                         <h2 className="card-title">{title}</h2>
                         <p className='font-bold'>Price: ${price}</p>
-                        <p>{detail}</p>
+                        <p>{detail.slice(0,100)} ...</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-primary"><Link to={`${_id}`}>Details</Link> </button>
                         </div>

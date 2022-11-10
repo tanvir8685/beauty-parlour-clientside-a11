@@ -12,7 +12,7 @@ const ServiceFullDetail = () => {
     const { user } = useContext(AuthContext);
     const [review, setReview] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/review?service=${_id}`)
+        fetch(`https://beauty-parlour-server-nine.vercel.app/review?service=${_id}`)
             .then(res => res.json())
             .then(data => setReview(data))
     }, [])
@@ -35,7 +35,7 @@ const ServiceFullDetail = () => {
 
         }
         console.log(reviewFordb)
-        fetch('http://localhost:5000/review', {
+        fetch('https://beauty-parlour-server-nine.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -85,7 +85,7 @@ const ServiceFullDetail = () => {
                 <div className="form-control">
                     <label className="input-group input-group-md">
                         <span>Comment Box</span>
-                        <input type="text" name='review' placeholder="Type here" className="input input-bordered input-md" />
+                        <input  type="text" name='review' placeholder="Type here" className="input input-bordered input-md" />
 
                         {
                             user?.uid ? <button className='btn btn-primary ml-3'>Submit</button> : <p>To comment you have to login </p>

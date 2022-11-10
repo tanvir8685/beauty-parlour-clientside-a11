@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import AddService from '../../AddService/AddService';
 import ServiceCart from './ServiceCart';
 
 const Services = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/')
+        fetch('https://beauty-parlour-server-nine.vercel.app/')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
@@ -21,10 +22,11 @@ const Services = () => {
                 }
             </div>
             <div className='container py-10 px-10 mx-0 min-w-full flex flex-col items-center'>
+            
                 <p></p>
                 <button className=' btn btn-outline btn-primary' ><Link to='/services'>See All</Link></button>
             </div>
-
+                
         </div>
     );
 };

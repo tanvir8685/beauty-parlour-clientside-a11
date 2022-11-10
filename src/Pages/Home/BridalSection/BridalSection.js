@@ -46,7 +46,7 @@ const BridalSection = () => {
                     </div>
                     <div>
                         <h1 className="text-5xl font-bold">My Weeding Makeover</h1>
-                        <p className="py-6">I am special at to bridal make over.I use their skin tone .then analysis thir face shape then i start make up what suit in their face</p>
+                        <p  className="py-6">I am special at to bridal make over.I use their skin tone .then analysis thir face shape then i start make up what suit in their face</p>
                        
                     </div>
                 </div>

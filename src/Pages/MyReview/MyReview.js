@@ -6,7 +6,7 @@ const MyReview = () => {
     const [myReview, setMyreview] = useState([]);
     const { user } = useContext(AuthContext);
     useEffect(() => {
-        fetch(`http://localhost:5000/review?email=${user?.email}`)
+        fetch(`https://beauty-parlour-server-nine.vercel.app/review?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setMyreview(data))
     }, [user?.email])
@@ -15,7 +15,7 @@ const MyReview = () => {
     const handleDelete=_id=>{
         const processed=window.confirm("are you sure")
         if (processed){
-            fetch(`http://localhost:5000/review/${_id}`,{
+            fetch(`https://beauty-parlour-server-nine.vercel.app/review/${_id}`,{
                 method:'DELETE'
             })
             .then(res=>res.json())
