@@ -1,9 +1,11 @@
 
 import { Link, useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 import AllServiceCart from './AllServiceCart';
 
 const AllServices = () => {
+    useTitle('allService')
     const services=useLoaderData();
     // const [services, setServices] = useState([]);
     return (

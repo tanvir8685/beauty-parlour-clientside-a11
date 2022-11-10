@@ -1,7 +1,9 @@
 import React from 'react';
+import useTitle from '../../hooks/useTitle';
 
 
 const AddPersonalService = () => {
+    useTitle('addService')
     const handleService=(event)=>{
         event.preventDefault();
         const form = event.target;

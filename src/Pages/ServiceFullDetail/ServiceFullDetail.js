@@ -5,8 +5,10 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ReviewSection from '../ReviewSection/ReviewSection';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import useTitle from '../../hooks/useTitle';
 
 const ServiceFullDetail = () => {
+    useTitle('serviceDetail')
     const service = useLoaderData();
     const { _id, title, detail, price, img } = service;
     const { user } = useContext(AuthContext);

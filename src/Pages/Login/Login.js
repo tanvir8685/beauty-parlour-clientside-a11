@@ -2,9 +2,11 @@ import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 import img from './../../assests/images/login.svg';
 
 const Login = () => {
+    useTitle('login')
     const{signIn,googleSignIn,providerLogin}=useContext(AuthContext);
     const handleLogIn = event => {
         event.preventDefault();
