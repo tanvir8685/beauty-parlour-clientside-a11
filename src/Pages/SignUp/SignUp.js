@@ -1,3 +1,4 @@
+import { fromJSON } from 'postcss';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../assests/images/login.svg'
@@ -21,6 +22,7 @@ const SignUp = () => {
             const user = userCredential.user;
             console.log(user)
             handleUpdateUserProfile(name,img);
+            form.reset();
             
             // ...
           })
@@ -58,7 +60,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" name='name' placeholder="name" className="input input-bordered" />
+                            <input type="text" name='name' placeholder="name" className="input input-bordered" required/>
                         </div>
                         <div className="form-control">
                             <label className="label">
