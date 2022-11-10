@@ -53,8 +53,8 @@ const ServiceFullDetail = () => {
     }
     return (
         <div>
-            <h1>This is service full details</h1>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            
+            <div className="card w-96 bg-base-100 shadow-xl ml-6 mb-6 p-4">
                 <PhotoProvider>
                     <PhotoView src={img}>
                         <figure><img src={img} alt="Shoes" /></figure>
@@ -63,33 +63,37 @@ const ServiceFullDetail = () => {
 
                 <div className="card-body">
                     <h2 className="card-title">{title}</h2>
-                    <p>{price}</p>
+                    <p className='fs-xl font-bold'>Price:${price}</p>
                     <p>{detail}</p>
                     <p></p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                        
 
                     </div>
                 </div>
             </div>
-            <h2>There have  {review.length} reviews</h2>
+            <div className='ml-6'>
+            <h2 className='fs-xl font-bold ml-6'>All Comments</h2>
             {
                 review.map(rev => <ReviewSection
                     key={rev._id}
                     rev={rev}></ReviewSection>)
             }
-            <form onSubmit={handlereview}>
+            </div>
+            
+            <form className='ml-6' onSubmit={handlereview}>
                 <div className="form-control">
                     <label className="input-group input-group-md">
-                        <span>MD</span>
+                        <span>Comment Box</span>
                         <input type="text" name='review' placeholder="Type here" className="input input-bordered input-md" />
 
                         {
-                            user?.uid ? <button>Submit</button> : <p>To comment you have to login </p>
+                            user?.uid ? <button className='btn btn-primary ml-3'>Submit</button> : <p>To comment you have to login </p>
                         }
 
 
                     </label>
+                    <p>note:<small>Please refresh to see your current comment</small> </p>
                 </div>
             </form>
         </div>

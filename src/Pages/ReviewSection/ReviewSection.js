@@ -5,7 +5,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 const ReviewSection = ({ rev }) => {
   const { name, comment, photo } = rev;
   return (
-    <div className="flex items-center">
+    <div className="flex items-center my-2">
       <PhotoProvider>
         <PhotoView src={photo}>
           <img className='mask mask-squircle w-12 h-12' alt='' src={photo} />

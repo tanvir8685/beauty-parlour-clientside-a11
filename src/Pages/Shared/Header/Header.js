@@ -36,8 +36,9 @@ const Header = () => {
                             {menuItems}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost normal-case text-xl">
-                        <img src='' alt="" />
+                    <Link to='/' className=" mask mask-squircle w-32 h-12">
+                        <img src='https://www.shutterstock.com/image-photo/high-angle-view-various-make-600w-1306736779.jpg' alt="" />
+                        
                     </Link>
                 </div>
                 <div className="navbar-center  hidden lg:flex ">

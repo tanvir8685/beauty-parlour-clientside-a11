@@ -9,7 +9,7 @@ const AllServices = () => {
     return (
         <div>
             <div className='container'>
-            <h2>here is my services</h2>
+            
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
 
                 {
@@ -18,8 +18,9 @@ const AllServices = () => {
                         service={service}></AllServiceCart>)
                 }
             </div>
-            <button><Link to='/'>Back Home</Link></button>
+            
         </div>
+        
         </div>
     );
 };
